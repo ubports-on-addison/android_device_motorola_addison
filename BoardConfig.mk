@@ -37,6 +37,9 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
 
+# Binder API version
+TARGET_USES_64_BIT_BINDER := true
+
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := addison,addison_retail
 
@@ -55,6 +58,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := addison_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androidkernel-
 
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
