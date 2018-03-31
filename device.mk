@@ -89,6 +89,9 @@ PRODUCT_PACKAGES += \
     libbson \
     Snap
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.camera.shutter.disable=1
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8953_mot_camera.xml:system/etc/camera/msm8953_mot_camera.xml \
     $(LOCAL_PATH)/configs/camera/ov5693_chromatix.xml:system/etc/camera/ov5693_chromatix.xml \
@@ -267,3 +270,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+
+#GreyBus
+PRODUCT_PACKAGES += \
+    greybus
