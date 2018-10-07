@@ -34,7 +34,7 @@ ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_JACK_ENABLED := incremental
 endif
 
-include frameworks/base/packages/SettingsLib/common.mk
+#include frameworks/base/packages/SettingsLib/common.mk
 
 include $(BUILD_PACKAGE)
 
